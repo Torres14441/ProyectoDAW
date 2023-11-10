@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilohistorial.css">
+    <link rel="icon" type="image/png" href="img/favaincon04.png"/>
+
 </head>
-<body>
+<body id="body" class="light-mode">
     <header>
         <nav>
             <ul>
@@ -16,6 +18,7 @@
                 <li><a href="notros.html">Sobre Nosotros</a></li>
                 <li><a href="AgregarNota.html">Crear una Nota</a></li>
                 <li><a href="historial.html">Historial</a></li>
+                <li><input type="button" value="     ●" class="switch" id="darklight" style="font-size: 30px;"></li>
             </ul>
         </nav>
     </header>
@@ -29,6 +32,8 @@
                     <th>Tipo</th>
                     <th>Contenido</th>
                     <th>Fecha</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody id="historial-table">
@@ -38,5 +43,6 @@
   </div>
     
     <script src="js/historial.js"></script>
+    <script src="js/darkmodeHistory.js"></script>
 </body>
 </html>

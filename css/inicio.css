@@ -10,10 +10,10 @@ section{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   padding: 10px;
 
 }
+
 
 .container{  
     position: relative;
@@ -101,4 +101,48 @@ ul :hover{
     animation: animacion 5s linear infinite;
 
 }
+
+#infoDiv{
+    padding-top: 40px;
+}
+
+
+/*Modo oscuro css*/
+.light-mode{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.dark-mode{
+    background-image: linear-gradient(to top, #070626 0%, #0E040E 100%);
+
+}
+
+/*Boton*/
+.switch {
+    width: 80px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+
+  }
+  
+  .switch::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #66bb6a;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  #darklight:checked + .switch::before {
+    left: 40px;
+  }
+  
+  
+
+
 

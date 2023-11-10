@@ -8,12 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const tipo = document.getElementById("Tipo").value;
       const contenido = document.getElementById("contenido").value;
       const fecha = Math.floor(new Date().getTime() / 1000);
+      const usuario = sessionStorage.getItem('usuario');
   
       const nota = {
         Titulo: titulo,
         Tipo: tipo,
         Contenido: contenido,
-        Fecha: fecha
+        Fecha: fecha,
+        Usuario: usuario
       };
   
       fetch('https://652f649a0b8d8ddac0b26e29.mockapi.io/notas', {
