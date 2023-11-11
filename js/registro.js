@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             contrasenaInput.value = '';
         }).catch(error => {
             console.error('Error:', error);
-            // Manejar errores aquí, como mostrar un mensaje de error al usuario.
+            
         });
     });
 });

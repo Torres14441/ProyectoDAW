@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const historialTable = document.getElementById('historial-table');
 
-     // Obtener el nombre de usuario almacenado en sessionStorage
      const usuarioEnSesion = sessionStorage.getItem('usuario');
 
     // Realizar solicitud GET a la API
@@ -45,7 +44,6 @@ function eliminarNota(id) {
             if (response.ok) {
                 // Eliminación exitosa
                 alert("La nota ha sido eliminada exitosamente.");
-                // Puedes recargar la página o actualizar la tabla de historial aquí
                 location.reload();
             } else {
                 // Error al eliminar la nota
@@ -87,7 +85,6 @@ function editarNota(id) {
             <button class="btn btn-primary" onclick="actualizarNota(${id})">Guardar</button>
         `;
 
-        // Agregar el formulario de edición al DOM sin reemplazar el contenido existente
         document.body.appendChild(formularioEdicion);
     })
     .catch(error => {
@@ -118,7 +115,7 @@ function actualizarNota(id) {
     .then(response => {
         if (response.ok) {
             alert('La nota ha sido actualizada exitosamente.');
-            location.reload(); // Recarga la página para mostrar la tabla actualizada
+            location.reload(); 
         } else {
             console.error('Error al actualizar la nota.');
             alert('Error al actualizar la nota.');
